@@ -1,11 +1,9 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Mail, Phone } from "lucide-react"
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -55,6 +53,24 @@ export function ContactForm() {
       setIsSubmitting(false)
     }
   }
+
+  const contactLinks = [
+    {
+      icon: FaGithub,
+      href: "https://github.com/aniket000k",
+      label: "GitHub",
+    },
+    {
+      icon: FaLinkedin,
+      href: "https://linkedin.com/in/aniket-kedari",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaTwitter,
+      href: "https://x.com/aniketx88",
+      label: "X (Twitter)",
+    },
+  ]
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -167,22 +183,20 @@ export function ContactForm() {
             <div className="mt-12 pt-8 border-t border-primary/20">
               <p className="text-foreground/60 text-center mb-6">Or reach out directly:</p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
-                <motion.a
-                  href="tel:+919607502554"
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center justify-center gap-3 text-foreground/70 hover:text-primary transition-colors"
-                >
-                  <Phone size={20} />
-                  <span>+91 9607502554</span>
-                </motion.a>
-                <motion.a
-                  href="mailto:aniket.kedari888@gmail.com"
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center justify-center gap-3 text-foreground/70 hover:text-primary transition-colors"
-                >
-                  <Mail size={20} />
-                  <span>aniket.kedari888@gmail.com</span>
-                </motion.a>
+                {contactLinks.map((link, index) => (
+                  <motion.a
+                    key={index}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-foreground/70 hover:text-primary transition-colors"
+                  >
+                    <link.icon size={20} />
+                    <span className="text-sm font-medium">{link.label}</span>
+                  </motion.a>
+                ))}
               </div>
             </div>
           </Card>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { FiMenu, FiX } from "react-icons/fi"
 import { AnimatePresence } from "framer-motion"
 import { ThemeToggle } from "./theme-toggle"
 
@@ -65,7 +65,7 @@ export function Navbar() {
         <div className="flex md:hidden gap-2 items-center">
           <ThemeToggle />
           <motion.button onClick={() => setIsOpen(!isOpen)} className="text-foreground" whileTap={{ scale: 0.95 }}>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </motion.button>
         </div>
 

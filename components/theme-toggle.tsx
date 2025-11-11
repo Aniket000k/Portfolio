@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
-import { Moon, Sun } from "lucide-react"
+import { FiSun, FiMoon } from "react-icons/fi"
 import { motion } from "framer-motion"
 
 export function ThemeToggle() {
@@ -24,9 +24,9 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {theme === "dark" ? (
-        <Sun size={20} className="text-yellow-500" />
+        <FiSun size={20} className="text-yellow-500" />
       ) : (
-        <Moon size={20} className="text-indigo-600" />
+        <FiMoon size={20} className="text-indigo-600" />
       )}
     </motion.button>
   )

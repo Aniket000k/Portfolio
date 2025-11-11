@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { ExternalLink, Github } from "lucide-react"
+import { FaGithub } from "react-icons/fa"
+import { FiExternalLink } from "react-icons/fi"
+
 
 const projects = [
   {
@@ -114,7 +116,7 @@ export function ProjectsSection() {
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
                   >
-                    <Github size={18} />
+                    <FaGithub size={18} />
                     <span className="text-sm font-medium">GitHub</span>
                   </motion.a>
                   <motion.a
@@ -126,7 +128,7 @@ export function ProjectsSection() {
                     className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors ml-auto"
                   >
                     <span className="text-sm font-medium">Live Demo</span>
-                    <ExternalLink size={18} />
+                    <FiExternalLink size={18} />
                   </motion.a>
                 </div>
               </Card>
