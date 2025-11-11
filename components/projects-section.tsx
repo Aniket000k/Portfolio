@@ -10,8 +10,8 @@ const projects = [
     description:
       "Full-stack AI-powered finance platform with budget alerts, automated monthly email reports, and receipt scanning via Gemini API. Improved financial tracking efficiency by 40% for users.",
     tech: ["React 19", "Next.js 15", "Supabase", "Prisma", "Gemini API", "Clerk", "Tailwind CSS"],
-    liveLink: "https://budgetiq.example.com",
-    githubLink: "https://github.com/aniketkdri/budgetiq",
+    liveLink: "https://budget-iq-pi.vercel.app/",
+    githubLink: "https://github.com/Aniket000k/BudgetIQ",
     highlights: ["AI Receipt Scanning", "Automated Reports", "Real-time Alerts"],
   },
   {
@@ -19,8 +19,8 @@ const projects = [
     description:
       "Real-time queue management system with role-based dashboards, multi-branch support, and live updates. Reduced average wait time by 30% and supported 100+ concurrent users.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "JWT"],
-    liveLink: "https://queuepro.example.com",
-    githubLink: "https://github.com/aniketkdri/queuepro",
+    liveLink: "https://queuepro.onrender.com/",
+    githubLink: "https://github.com/Aniket000k/QueuePro",
     highlights: ["Real-time Updates", "Role-based Access", "Analytics Dashboard"],
   },
 ]
